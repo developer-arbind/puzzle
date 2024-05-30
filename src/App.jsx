@@ -109,7 +109,7 @@ function App() {
     console.log("the duck");
     intervalRef.current = setInterval(() => {
       console.log("the timer: ", velocity);
-      if (velocity === 9) {
+      if (velocity === 1800) {
         setAnswer((prev) => {
           return {
             ...prev,

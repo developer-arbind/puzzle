@@ -4,12 +4,6 @@ import "./App.css";
 function App() {
   const [clicked, setClicked] = useState(false);
   const [anwser, setAnswer] = useState({
-    chipher: {
-      answer: "CAN WE HUG AFTER CLASS?",
-      answerd: false,
-      clicked: false,
-      input: "",
-    },
     reaction: {
       answer: "my honest reaction",
       answerd: false,
@@ -97,7 +91,7 @@ function App() {
         leastCount++;
       }
     }
-    if (leastCount === 4) {
+    if (leastCount === 3) {
       setShow(true);
     } else {
       alert("Nope. Solve Those All.");
@@ -229,26 +223,6 @@ function App() {
           </button>
           {anwser.tiktok.clicked ? (
             <p>{anwser.tiktok.answerd ? "✅Correct" : "❌Wrong"}</p>
-          ) : null}
-          <hr />
-          <h3 style={styles.subHeader}>Question 3 (Easy one)</h3>
-          <p>
-            CIPHER TEXT: PBQ JX YJF JPJMZ JYPPR. CODE: Z B C D L M A G K F E H N
-            O P Q R S T U V W X I J Y <br />
-            Now, what is the decrypted code of: PBQ JX YJF JPJMZ JYPPR? Is it in
-            English?
-          </p>
-          <label htmlFor="reaction">Enter DECRYPTED WORDS: </label>
-          <input
-            type="text"
-            placeholder="SOME SOME SOME THING...."
-            style={styles.input}
-            value={anwser.chipher.input}
-            onChange={(event) => onTyping("chipher", event.target.value)}
-          />
-          <button onClick={() => onResultShow("chipher")}>See result</button>
-          {anwser.chipher.clicked ? (
-            <p>{anwser.chipher.answerd ? "✅Correct" : "❌Wrong"}</p>
           ) : null}
           <hr />
           <h3 style={styles.subHeader}>

@@ -160,129 +160,132 @@ function App() {
   }, [timer]);
 
   return (
-    <div style={styles.container}>
-      {!show ? (
-        <>
-          <h1 style={styles.header}>
-            Hey, I found this special picture after 91 hours of searching. I
-            want you to see it because it's truly priceless and precious. I
-            dedicated a lot of effort to finding it, so I hope you're willing to
-            put in some effort too. I have a few challenges for you to tackle,
-            and if you succeed, you'll get to see this beautiful image. Trust
-            me, it’s worth it—this picture holds something truly amazing. GOOD
-            LUCK.
-          </h1>
-          <h3 style={styles.subHeader}>Question 1 (easy one)</h3>
-          <p>Find the name of this meme:</p>
-          <video
-            src="./reaction.mp4"
-            controls
-            loop
-            style={styles.video}
-          ></video>
-          <hr />
-          <label htmlFor="reaction">Enter here: </label>
-          <input
-            type="text"
-            placeholder="meme name..."
-            style={styles.input}
-            value={anwser.reaction.input}
-            onChange={(event) => onTyping("reaction", event.target.value)}
-          />
-          <button onClick={() => onResultShow("reaction")}>See result</button>
-          {anwser.reaction.clicked ? (
-            <p>{anwser.reaction.answerd ? "✅Correct" : "❌Wrong"}</p>
-          ) : null}
-          <hr />
-          <h3 style={styles.subHeader}>Question 2 (Hard one) CIA level</h3>
-          <p>
-            Paste the video url of where this video uploaded (e.g., Facebook,
-            TikTok, YouTube, etc.) where this video was uploaded by analyzing
-            the screenshot provided.
-          </p>
-          <img src="./worker.png" alt="" style={styles.image} />
-          <button
-            onClick={() => {
-              window.open("./worker.png");
-            }}
-            style={styles.button}
-          >
-            Open Image in new tab.
-          </button>
-          <hr />
-          <label htmlFor="reaction">Enter URL here: </label>
-          <input
-            type="text"
-            placeholder="https://something...."
-            style={styles.input}
-            value={anwser.tiktok.input}
-            onChange={(event) => onTyping("tiktok", event.target.value)}
-          />
-          <button onClick={() => onResultShow("tiktok", true)}>
-            See result
-          </button>
-          {anwser.tiktok.clicked ? (
-            <p>{anwser.tiktok.answerd ? "✅Correct" : "❌Wrong"}</p>
-          ) : null}
-          <hr />
-          <h3 style={styles.subHeader}>
-            Question 4 (Universal Impossible one)
-          </h3>
-          <p>What's my secret password?</p>
-          <label htmlFor="reaction">My secret code: </label>
-          <input
-            type="text"
-            placeholder="...."
-            style={styles.input}
-            value={anwser.IQ.input}
-            onChange={(event) => onTyping("IQ", event.target.value)}
-          />
-          <button onClick={() => onResultShow("IQ")}>See result</button>
-          {anwser.IQ.clicked ? (
-            <p>{anwser.IQ.answerd ? "✅Correct" : "❌Wrong"}</p>
-          ) : null}
-          <hr />
-          <h3 style={styles.subHeader}>Okay, the last one (IRRITATING ONE)</h3>
-          <p>
-            Rule: After clicking the start timer, you need to wait until the
-            timer ends. If you close the tab or minimize it, it won't work. You
-            completely need to wait for 30 minutes straight, or you can leave
-            here.
-          </p>
-          <button onClick={onTimerClick} style={styles.button}>
-            Start the timer
-          </button>
-          {clicked ? (
-            <p>
-              Cool, minimize your browser and open it again to start the timer:
-              ---- {formatTime(timer)}
-            </p>
-          ) : null}
-        </>
-      ) : (
-        <>
-          <img
-            src="https://i.imgur.com/CrRwETF.jpg"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              display: "block",
-              margin: "0 auto",
-            }}
-            alt="Responsive"
-          />
-          <hr />
-          Here's the image, enjoy. <br />
-          Scroll down to see one more magic.&#x2193;
-          <p style={{ marginTop: "40rem" }}>
-            See this:{" "}
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-              Hey Click me
-            </a>
-          </p>
-        </>
-      )}
+    <div>
+      <h1>Time up.</h1>
     </div>
+    // <div style={styles.container}>
+    //   {!show ? (
+    //     <>
+    //       <h1 style={styles.header}>
+    //         Hey, I found this special picture after 91 hours of searching. I
+    //         want you to see it because it's truly priceless and precious. I
+    //         dedicated a lot of effort to finding it, so I hope you're willing to
+    //         put in some effort too. I have a few challenges for you to tackle,
+    //         and if you succeed, you'll get to see this beautiful image. Trust
+    //         me, it’s worth it—this picture holds something truly amazing. GOOD
+    //         LUCK.
+    //       </h1>
+    //       <h3 style={styles.subHeader}>Question 1 (easy one)</h3>
+    //       <p>Find the name of this meme:</p>
+    //       <video
+    //         src="./reaction.mp4"
+    //         controls
+    //         loop
+    //         style={styles.video}
+    //       ></video>
+    //       <hr />
+    //       <label htmlFor="reaction">Enter here: </label>
+    //       <input
+    //         type="text"
+    //         placeholder="meme name..."
+    //         style={styles.input}
+    //         value={anwser.reaction.input}
+    //         onChange={(event) => onTyping("reaction", event.target.value)}
+    //       />
+    //       <button onClick={() => onResultShow("reaction")}>See result</button>
+    //       {anwser.reaction.clicked ? (
+    //         <p>{anwser.reaction.answerd ? "✅Correct" : "❌Wrong"}</p>
+    //       ) : null}
+    //       <hr />
+    //       <h3 style={styles.subHeader}>Question 2 (Hard one) CIA level</h3>
+    //       <p>
+    //         Paste the video url of where this video uploaded (e.g., Facebook,
+    //         TikTok, YouTube, etc.) where this video was uploaded by analyzing
+    //         the screenshot provided.
+    //       </p>
+    //       <img src="./worker.png" alt="" style={styles.image} />
+    //       <button
+    //         onClick={() => {
+    //           window.open("./worker.png");
+    //         }}
+    //         style={styles.button}
+    //       >
+    //         Open Image in new tab.
+    //       </button>
+    //       <hr />
+    //       <label htmlFor="reaction">Enter URL here: </label>
+    //       <input
+    //         type="text"
+    //         placeholder="https://something...."
+    //         style={styles.input}
+    //         value={anwser.tiktok.input}
+    //         onChange={(event) => onTyping("tiktok", event.target.value)}
+    //       />
+    //       <button onClick={() => onResultShow("tiktok", true)}>
+    //         See result
+    //       </button>
+    //       {anwser.tiktok.clicked ? (
+    //         <p>{anwser.tiktok.answerd ? "✅Correct" : "❌Wrong"}</p>
+    //       ) : null}
+    //       <hr />
+    //       <h3 style={styles.subHeader}>
+    //         Question 4 (Universal Impossible one)
+    //       </h3>
+    //       <p>What's my secret password?</p>
+    //       <label htmlFor="reaction">My secret code: </label>
+    //       <input
+    //         type="text"
+    //         placeholder="...."
+    //         style={styles.input}
+    //         value={anwser.IQ.input}
+    //         onChange={(event) => onTyping("IQ", event.target.value)}
+    //       />
+    //       <button onClick={() => onResultShow("IQ")}>See result</button>
+    //       {anwser.IQ.clicked ? (
+    //         <p>{anwser.IQ.answerd ? "✅Correct" : "❌Wrong"}</p>
+    //       ) : null}
+    //       <hr />
+    //       <h3 style={styles.subHeader}>Okay, the last one (IRRITATING ONE)</h3>
+    //       <p>
+    //         Rule: After clicking the start timer, you need to wait until the
+    //         timer ends. If you close the tab or minimize it, it won't work. You
+    //         completely need to wait for 30 minutes straight, or you can leave
+    //         here.
+    //       </p>
+    //       <button onClick={onTimerClick} style={styles.button}>
+    //         Start the timer
+    //       </button>
+    //       {clicked ? (
+    //         <p>
+    //           Cool, minimize your browser and open it again to start the timer:
+    //           ---- {formatTime(timer)}
+    //         </p>
+    //       ) : null}
+    //     </>
+    //   ) : (
+    //     <>
+    //       <img
+    //         src="https://i.imgur.com/CrRwETF.jpg"
+    //         style={{
+    //           maxWidth: "100%",
+    //           height: "auto",
+    //           display: "block",
+    //           margin: "0 auto",
+    //         }}
+    //         alt="Responsive"
+    //       />
+    //       <hr />
+    //       Here's the image, enjoy. <br />
+    //       Scroll down to see one more magic.&#x2193;
+    //       <p style={{ marginTop: "40rem" }}>
+    //         See this:{" "}
+    //         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    //           Hey Click me
+    //         </a>
+    //       </p>
+    //     </>
+    //   )}
+    // </div>
   );
 }
 
